@@ -1,14 +1,14 @@
 ▶ ☠ ✞ Trabajo Práctico: Desarrollo del juego del ahorcado 웃 en consola ✞ ☠ ◀</br>
-Grupo: ▌║█║▌│║▌│║▌║▌█║ 𝗠𝗲𝗺𝗲𝗻𝘁𝗼 𝗠𝗼𝗿𝗶 ▌│║▌║▌│║║▌█║▌║█  </br>
 </br>
+Grupo: ▌║█║▌│║▌│║▌║▌█║ 𝗠𝗲𝗺𝗲𝗻𝘁𝗼 𝗠𝗼𝗿𝗶 ▌│║▌║▌│║║▌█║▌║█ </br>
 </br>
  Integrantes: </br>
- 𝓒𝓻𝓲𝓼𝓽𝓲𝓪𝓷 𝓒𝓸𝓵𝓵𝓪𝓷𝓽𝓮 (Logistica inicial, planificación inicial y Diseños de monigote)</br>
- 𝓐𝓷𝓭𝓻𝓮𝓼 𝓑𝓮𝓷𝓮𝓰𝓪𝓼 (Desarrollo de funciones de y Diseños de monigote)</br>
- 𝓜𝓪𝓻𝓬𝓸𝓼 𝓐𝓵𝓶𝓲𝓻𝓸𝓷 (El del clima)</br>
+ 𝓒𝓻𝓲𝓼𝓽𝓲𝓪𝓷 𝓒𝓸𝓵𝓵𝓪𝓷𝓽𝓮 (Planificación inicial, diseños de monigote, y documentación)</br>
+ 𝓐𝓷𝓭𝓻𝓮𝓼 𝓑𝓮𝓷𝓮𝓰𝓪𝓼 (Planificación inicial, Desarrollo de funciones, diseños de monigote, y documentación)</br>
+ 𝓜𝓪𝓻𝓬𝓸𝓼 𝓐𝓵𝓶𝓲𝓻𝓸𝓷 (Desarrollo de funciones, testeo de proyecto y documentación)</br>
 </br>
- agradecimientos a: 𝙑𝙖𝙡𝙚𝙣𝙩𝙞𝙣 𝘿'𝙖𝙙𝙖𝙢𝙤 (∩ ͡° ͜ʖ ͡°)⊃
-
+agradecimientos a: 𝙑𝙖𝙡𝙚𝙣𝙩𝙞𝙣 𝘿'𝙖𝙙𝙖𝙢𝙤 (∩ ͡° ͜ʖ ͡°)⊃
+</br>
 Enunciado</br>
 Objetivo:</br>
 Desarrollar el clásico juego del Ahorcado en una versión de consola en Python. Los
