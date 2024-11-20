@@ -1,17 +1,5 @@
 ▶ ☠ ✞ Trabajo Práctico: Desarrollo del juego del ahorcado 웃 en consola ✞ ☠ ◀</br>
-Grupo: </br>
-███&nbsp;&nbsp;&nbsp;&nbsp;███&nbsp;███████&nbsp;███&nbsp;&nbsp;&nbsp;&nbsp;███&nbsp;███████&nbsp;███&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;████████&nbsp;██████<br>
-████&nbsp;████&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████&nbsp;████&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██<br>
-██&nbsp;████&nbsp;██&nbsp;█████&nbsp;&nbsp;&nbsp;██&nbsp;████&nbsp;██&nbsp;█████&nbsp;&nbsp;&nbsp;██&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██<br>
-██&nbsp;&nbsp;██&nbsp;&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;██&nbsp;&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██<br>
-██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;███████&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;███████&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██████<br>
-
-███&nbsp;&nbsp;&nbsp;&nbsp;███&nbsp;██████&nbsp;██████&nbsp;██<br>
-████&nbsp;████&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██<br>
-██&nbsp;████&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;██████&nbsp;&nbsp;██<br>
-██&nbsp;&nbsp;██&nbsp;&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██<br>
-██&nbsp;&nbsp;&nbsp;&nbsp;██&nbsp;██████&nbsp;&nbsp;██&nbsp;&nbsp;&nbsp;&nbsp;██<br>
-                                                                                          
+Grupo: ▌║█║▌│║▌│║▌║▌█║Memento Mori ▌│║▌║▌│║║▌█║▌║█  </br>                                                                         
  </br>
  Integrantes: </br>
  𝓒𝓻𝓲𝓼𝓽𝓲𝓪𝓷 𝓒𝓸𝓵𝓵𝓪𝓷𝓽𝓮 (Logistica inicial, planificación inicial y Diseños de monigote)</br>
