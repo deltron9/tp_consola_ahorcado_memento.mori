@@ -13,8 +13,10 @@ import json
 with open("data.json", "r") as archivo:
     datos = json.load(archivo)
 
+nombre_usuario = input("Ingrese su nombre: ")
+
 estructura_datos_usuario = {
-    "nombre": "",
+    "nombre": {nombre_usuario},
     "Puntaje": 0,
 }
 
@@ -30,14 +32,16 @@ intentos = 0
 while intentos < 6:
 
     letra_ingresada_por_usuario = input("Ingrese una letra: ")
-
+    
     if letra_ingresada_por_usuario in palabra_random_EN:
         estructura_datos_usuario["Puntaje"] += 1 # El usuario recibe un punto por cada palabra adivinada
         letras_adivinadas.append(letra_ingresada_por_usuario)
         print("Se encuentra alli !!!!!") # Se agrega la letra al diccionario de letras adivinadas
+        if letra_ingresada_por_usuario in letras_adivinadas:
+            print("Esta letra ya fue utilizada!")
     else:
         """ Funcion de imprimir monigote (se le suma +1 al monigote)"""
-        print("ERRRORRR NO ESTÁ")
+        print(f"NO ESTÁ! Te quedan {intentos} intentos")
         intentos += 1
 
 
