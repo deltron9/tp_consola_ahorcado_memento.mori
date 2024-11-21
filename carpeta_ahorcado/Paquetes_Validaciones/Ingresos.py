@@ -41,8 +41,8 @@ def validar_cadena_en_juego(mensaje: str, mensaje_error: str = 'Error, solo pued
     '''
     caracter = str(input(mensaje))  #Solicita el ingreso
     try:
-        if len(str) <= longitud:
-            return str
+        if len(caracter) <= longitud:
+            return caracter
         
     except ValueError:
         return None  # Valida la longitud
