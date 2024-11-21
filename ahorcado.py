@@ -1,9 +1,6 @@
 import random
 import json
 
-# Esta lista será iterada a medida que el usuario vaya errando en sus elecciones en las letras  
-monigote = ["Inicial_sin_cabeza", "Cabeza", "Tórax", "Brazo izquierdo", "Brazo derecho", "Pierna izquierda", "Pierna derecha"]
-
 # def imprimir_monigote(diccionario: dict, etapa: int):
 #     '''
 #     Esta función recibe el diccionario con las imagenes a representar en consola y la key.
@@ -16,6 +13,10 @@ monigote = ["Inicial_sin_cabeza", "Cabeza", "Tórax", "Brazo izquierdo", "Brazo 
 with open("data.json", "r") as archivo:
     datos = json.load(archivo)
 
+estructura_datos_usuario = {
+    "nombre": "",
+    "Puntaje": 0,
+}
 
 # Vomitamos la lógica del punto D
 palabra_seleccionada = random.choice(datos["ahorcado"])
@@ -24,8 +25,6 @@ palabra_random_ES = palabra_seleccionada["ES"]
 
 letras_adivinadas = [] 
 
-score_letra_adivinada = 0
-
 intentos = 0
 
 while intentos < 6:
@@ -33,7 +32,7 @@ while intentos < 6:
     letra_ingresada_por_usuario = input("Ingrese una letra: ")
 
     if letra_ingresada_por_usuario in palabra_random_EN:
-        score_letra_adivinada = +1 # El usuario recibe un punto por cada palabra adivinada
+        estructura_datos_usuario["Puntaje"] += 1 # El usuario recibe un punto por cada palabra adivinada
         letras_adivinadas.append(letra_ingresada_por_usuario)
         print("Se encuentra alli !!!!!") # Se agrega la letra al diccionario de letras adivinadas
     else:
@@ -41,5 +40,9 @@ while intentos < 6:
         print("ERRRORRR NO ESTÁ")
         intentos += 1
 
+
+def guardar_puntajes(estructura_datos_usuario):
+    with open("scores.json", "w") as scores:
+        json.dump(estructura_datos_usuario, scores, indent=4)
 
 
