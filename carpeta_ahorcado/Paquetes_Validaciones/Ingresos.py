@@ -17,18 +17,18 @@ def validar_entero(mensaje: str, mensaje_error: str = "Error de ingreso", minimo
 
 #-------------------------Validación de cadena a la hora de ingresar nombre de usuario--------------------------------------
 
-def validar_cadena_usuario(mensaje: str, mensaje_error: str) -> str | None:
+def validar_cadena_usuario(mensaje: str, mensaje_error: str) -> str:
     '''
     Solicita una cadena y la valida por contenido.
-    Retorna la cadena si es válida (solo letras y números), o None si no lo es.
+    Retorna la cadena si es válida (solo letras y números).
     '''
     while True:
-        user_input = input(mensaje).strip()  #Solicita el ingreso y elimina espacios en blanco al inicio y final
-        if user_input and user_input.isalnum():#Verifica que la cadena sea alfanumérica (solo letras y números)
-            return user_input  #Retorna la cadena válida
+        user_input = input(mensaje).strip()  #Solicita el ingrso y elimina espacios en blanco al inicio y final
+        if user_input and user_input.isalnum():  #Verifica que la cadena sea alfanumérica (solo letras y números)
+            return user_input.capitalize()  #Retorna la caena válida capitalizada
         
-        print(mensaje_error)  #Muestr mensaje de error si la cadena no es válida
-        return None  #Retorna None si no hay un ingreso válido
+        print(mensaje_error)  # Muestra mensaje de error si la cadena no es válida
+
 
 
 
