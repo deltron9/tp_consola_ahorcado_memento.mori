@@ -16,33 +16,35 @@ def validar_entero(mensaje: str, mensaje_error: str = "Error de ingreso", minimo
 
 
 #-------------------------Validación de cadena a la hora de ingresar nombre de usuario--------------------------------------
+#Esta función SOLAMENTE cumple el rol de validar el nombre del usuario
 
-def validar_cadena_usuario(mensaje: str, mensaje_error: str) -> str | None:
+def validar_cadena_usuario(mensaje: str, mensaje_error: str) -> str:
     '''
     Solicita una cadena y la valida por contenido.
-    Retorna la cadena si es válida (solo letras y números), o None si no lo es.
+    Retorna la cadena si es válida (solo letras y números).
     '''
     while True:
-        user_input = input(mensaje).strip()  #Solicita el ingreso y elimina espacios en blanco al inicio y final
-        if user_input and user_input.isalnum():#Verifica que la cadena sea alfanumérica (solo letras y números)
-            return user_input  #Retorna la cadena válida
+        user_input = input(mensaje).strip()  #Solicita el ingrso y elimina espacios en blanco al inicio y final
+        if user_input and user_input.isalnum():  #Verifica que la cadena sea alfanumérica (solo letras y números)
+            return user_input.capitalize()  #Retorna la caena válida capitalizada
         
-        print(mensaje_error)  #Muestr mensaje de error si la cadena no es válida
-        return None  #Retorna None si no hay un ingreso válido
+        print(mensaje_error)  # Muestra mensaje de error si la cadena no es válida
+
 
 
 
 #------------------------------Validación a la hora de jugar------------------------------------------------------
-def validar_cadena_en_juego(mensaje: str, mensaje_error: str = 'Error, solo puedes ingresar 1 letra', longitud: int = 1) -> str | None: 
+#Esta funcion SOLAMENTE VALIDA EL INGRESO DE LA LETRA POR PARTE DEL USUARIO
+def validar_cadena_en_juego(mensaje: str, mensaje_error: str = 'Error, solo podés ingresar 1 letra capo', longitud: int = 1) -> str | None: 
     '''
     Solicita una cadena y la valida por longitud y contenido.
     Retorna la cadena si es válida, o None si no lo es.
-    Se valida si es alfanumérica o solo alfabética.
+    Se valida si es solo alfabética.
     '''
     caracter = str(input(mensaje))  #Solicita el ingreso
     try:
-        if len(str) <= longitud:
-            return str
+        if len(caracter) <= longitud:
+            return caracter
         
     except ValueError:
         return None  # Valida la longitud
@@ -50,5 +52,21 @@ def validar_cadena_en_juego(mensaje: str, mensaje_error: str = 'Error, solo pued
         return caracter
     else:
         return mensaje_error + mensaje
+
+#----------------------------------Validacion para idioma de palabras--------------------------------------
+#Esta funcion SOLAMENTE VALIDA la seleccion de idioma
+def validar_cadena_en_idioma(mensaje: str, mensaje_error: str = 'Error, selecciona [ES] o [EN]', longitud: int = 2) -> str | None:
+    """
+    Solicita que seleccione el idioma de palabras para jugar al usuario, valida su longitud (2 letras max) y contenido.
+    Retorna la cadena si es válida, o muestra un mensaje de error si no lo es.
+    La cadena debe ser alfabética.
+    """
+    cadena_idioma = input(mensaje).strip()  #Solicita el ingreso y elimina espacios extra
+    if len(cadena_idioma) <= longitud and cadena_idioma.isalpha():
+        return cadena_idioma  #Retorna la cadena si es válida
+    else:
+        print(mensaje_error)  #Muestra mensaje de error
+        return None  #Retorna None si no es válida
+
 
 
