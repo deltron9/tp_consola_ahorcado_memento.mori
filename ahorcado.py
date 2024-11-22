@@ -1,94 +1,13 @@
-from carpeta_ahorcado.Paquete_Estructura import *
+from carpeta_ahorcado.Paquetes_Estructura import *
 from carpeta_ahorcado.Paquetes_Validaciones import *
 import random
 import json
-
-# Cargamos los datos del archivo json
-def cargar_palabras():
-    with open("data.json", "r") as archivo:
-        return json.load(archivo)
-
-
-def guardar_puntajes(estructura_datos_usuario):
-    with open("scores.json", "a") as scores:
-        json.dump(estructura_datos_usuario, scores, indent=4)
-
-
-def cargar_puntaje():
-    with open("score.json", "r") as archivo:
-        return json.load(archivo)
-
-with open("data.json", "r") as archivo:
-    datos = json.load(archivo)
-
-estructura_datos_usuario = {
-    "nombre": "",
-    "Puntaje": 0,
-}
-
-# nombre_usuario = input("\n Ingrese su nombre: ").lower()
-
-# estructura_datos_usuario["nombre"] = nombre_usuario
-
-# Seleccionar idioma
-
-# Vomitamos la lógica del punto D
-
-
-# def seleccionar_idioma():
-#     msj_menu = 'SELECCIONE EN QUE IDIOMA EN QUE DESEA JUGAR\n\n[ES/EN]\n\n\tOPCION: '
-#     menu = input(msj_menu).lower()
-#     if menu == 'es':
-#         return palabra_seleccionada["ES"]
-#     else:
-#         return palabra_seleccionada["EN"]
-
-# Probando palabra oculta
-
-def seleccionar_palabra(palabras) -> list:
-    # Elige palabras del Json mediante random.choice
-    seleccionada = random.choice(palabras)
-    return seleccionada
-
-
-def palabra_elegida(msj_idioma, palabras_seleccionadas):
-    # Elije idioma y devuelve palabra seleccionada
-    idioma = input(msj_idioma).lower()
-    if idioma == 'es':
-        return palabras_seleccionadas["ES"]
-    else:
-        palabras_seleccionadas["EN"]
-
-
-# def palabra_elegida():
-#     # Devuelve la palabra elegida según el idioma que eligio el usuario
-#     eleccion = []
-#     palabra_seleccionada = seleccionar_palabra()  # Obtener palabra aleatoria
-#     if elegir_idioma():
-#         # Agregar palabra en español
-#         eleccion.append(palabra_seleccionada["ES"])
-#     else:
-#         eleccion.append(palabra_seleccionada["EN"])
-#     return eleccion
-
-# idioma = elegir_idioma()
-# palabra_seleccionada = seleccionar_palabra()
-
-
-def p_oculta(eleccion_palabra):
-    palabra_oculta = []
-
-    for _ in eleccion_palabra:
-        palabra_oculta.append('_')
-    return palabra_oculta
-
 
 def jugar():
 
     msj_idioma = 'SELECCIONE UNA OPCION\n\n[es/en]\n\n\tOPCION: '
     palabras = cargar_palabras()  # Las palabras cargadas del Json
-    palabras_seleccionadas = seleccionar_palabra(
-        palabras)  # Las palabras del random.choice
+    palabras_seleccionadas = seleccionar_palabra(palabras)  #Las palabras del random.choice
     eleccion_palabra = palabra_elegida(msj_idioma, palabras_seleccionadas)
     palabra_oculta = p_oculta(eleccion_palabra)
     letras_usadas = []
@@ -132,8 +51,7 @@ def jugar():
             print(imprimir_monigote(etapa))
 
         if '_' not in palabra_oculta:
-            print(f"\nGANASTEEE!! La palabra era {
-                  eleccion_palabra}. Obtuviste {puntos} puntos")
+            print(f"\nGANASTEEE!! La palabra era {eleccion_palabra}. Obtuviste {puntos} puntos")
         else:
             print(f"PERDISTE!! La palabra era {eleccion_palabra}")
 
