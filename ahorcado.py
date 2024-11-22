@@ -1,52 +1,73 @@
 import random
 import json
 
-# def imprimir_monigote(diccionario: dict, etapa: int):
-#     '''
-#     Esta función recibe el diccionario con las imagenes a representar en consola y la key.
-#     Lo que retorna es la imagen alojada en el valor de la key que se le
-#     '''
-#     return diccionario[etapa]  #Retorna el valor de la clave
-
-
 # Cargamos los datos del archivo json
 with open("data.json", "r") as archivo:
     datos = json.load(archivo)
 
-nombre_usuario = input("Ingrese su nombre: ")
+
 
 estructura_datos_usuario = {
-    "nombre": {nombre_usuario},
+    "nombre": "",
     "Puntaje": 0,
 }
 
+nombre_usuario = input("\n Ingrese su nombre: ").lower()
+estructura_datos_usuario["nombre"] = nombre_usuario
+
 # Vomitamos la lógica del punto D
-palabra_seleccionada = random.choice(datos["ahorcado"])
-palabra_random_EN = palabra_seleccionada["EN"]
-palabra_random_ES = palabra_seleccionada["ES"]
 
-letras_adivinadas = [] 
+def jugar():
 
-intentos = 0
+    palabra_seleccionada = random.choice(datos["ahorcado"])
+    palabra_random_EN = palabra_seleccionada["EN"]
+    palabra_random_ES = palabra_seleccionada["ES"]
 
-while intentos < 6:
+    letras_adivinadas = [] 
+    intentos = 6
+    letras_correctas = 0
 
-    letra_ingresada_por_usuario = input("Ingrese una letra: ")
     
-    if letra_ingresada_por_usuario in palabra_random_EN:
-        estructura_datos_usuario["Puntaje"] += 1 # El usuario recibe un punto por cada palabra adivinada
-        letras_adivinadas.append(letra_ingresada_por_usuario)
-        print("Se encuentra alli !!!!!") # Se agrega la letra al diccionario de letras adivinadas
+    while intentos > 0:
+
+        letra_ingresada_por_usuario = input("\n Ingrese una letra: ")
+
         if letra_ingresada_por_usuario in letras_adivinadas:
-            print("Esta letra ya fue utilizada!")
+            print(f"\n Esta letra ya fue utilizada!")
+        elif letra_ingresada_por_usuario in palabra_random_EN:
+                estructura_datos_usuario["Puntaje"] += 1 # El usuario recibe un punto por cada palabra adivinada
+                letras_adivinadas.append(letra_ingresada_por_usuario) # Se agrega la letra al diccionario de letras adivinadas
+                letras_correctas += 1
+                print("\n Se encuentra alli !!!!!")
+        else:
+            """ Funcion de imprimir monigote (se le suma +1 al monigote)"""
+            intentos -= 1
+            print(f"\n NO ESTÁ! Te quedan {intentos} intentos")
+        
+        if letras_correctas == len(palabra_random_EN):
+            estructura_datos_usuario["Puntaje"] += 3
+            print(f"\n FELICIDADES !! GANASTE Y SUMASTE {estructura_datos_usuario['Puntaje']} puntos")
+            break
+
+    print(f"\n La palabra era: {palabra_random_EN}")
+
+
+bandera_partida = True
+
+while bandera_partida == True:
+    jugar()
+    continua_partida = input("\n\n Desea seguir jugando? SI/NO: ").upper()
+    
+    if continua_partida == "SI":
+        print("\n En marcha! SIGAMOS")
     else:
-        """ Funcion de imprimir monigote (se le suma +1 al monigote)"""
-        print(f"NO ESTÁ! Te quedan {intentos} intentos")
-        intentos += 1
+        print("\n Adios rufián \n")
+        bandera_partida = False
+
 
 
 def guardar_puntajes(estructura_datos_usuario):
-    with open("scores.json", "w") as scores:
+    with open("scores.json", "a") as scores:
         json.dump(estructura_datos_usuario, scores, indent=4)
 
-
+puntaje_guardado = guardar_puntajes(estructura_datos_usuario)
