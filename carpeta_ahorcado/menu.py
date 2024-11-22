@@ -1,4 +1,4 @@
-from Paquete_Estructura import *
+from carpeta_ahorcado.Paquetes_Interfaz import *
 from Paquetes_Validaciones import *
 
 
@@ -10,9 +10,20 @@ while True:
 
     match menu:
         case 1:
+            elegir_idioma()
             
-            print(imprimir_monigote(1))
         case 2:
             pass    
         case 3:
             break
+
+
+def elegir_idioma():
+    msj_idioma = 'SELECCIONE UNA OPCION\n\n[es/en]\n\n\tOPCION: '
+    idioma = input(msj_idioma).lower()
+    if idioma == 'es':
+        # palabra_random_ES = palabra_seleccionada["ES"]
+        return True
+    else:
+        # palabra_random_EN = palabra_seleccionada["EN"]
+        return False

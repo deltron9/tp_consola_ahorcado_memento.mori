@@ -1,2 +1,2 @@
-from Paquete_Estructura.simulacion import *
-from Paquete_Estructura.etapas_monigote import *
+from carpeta_ahorcado.Paquetes_Interfaz.simulacion_de_carga import *
+from carpeta_ahorcado.Paquetes_Interfaz.etapas_monigote import *
