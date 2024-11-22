@@ -1,3 +1,22 @@
+''' Este contiene las imagenes dibujadas en ascii alojadas en un diccionario.
+Tambien se encuentra la funcion que imprime las imagenes en la consola.
+
+Diseños de monigote by:
+
+Def mostrar_identidad(Deltron):
+    with open('Deltron', 'r') as persona:
+        identidad = deltron.load(persona)
+    return identidad
+
+print(f'La identidad del parámetro ingresado es: {mostrar_identidad(Deltron)} )
+
+Terminal:
+PS C:\\Users\\Crist\\OneDrive\\Escritorio\\Nueva carpeta\\ahorcado>
+La identidad del parámetro ingresado es: Cristian Collante 
+▌ '''
+
+
+
 diccionario_imagenes = {
     1: '''▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 ▌________________╔════════════╗_________________________▐
