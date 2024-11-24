@@ -42,6 +42,3 @@ def simular_cargando(mensaje: str = 'Cargando') -> str:
         if suma_puntos == 3:
             print(f'¡Carga completa!')
             time.sleep(2)
-
-
-
