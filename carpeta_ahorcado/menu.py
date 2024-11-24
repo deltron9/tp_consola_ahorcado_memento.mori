@@ -3,7 +3,13 @@ from Paquetes_Estructura import *
 from Paquetes_Validaciones import *  
 from Paquetes_Interfaz import *  
 
+
+
+nombre_usuario = validar_cadena_usuario(
+    "Ingrese su nombre \nahorcado@python~$:", 'Error al ingresar su nombre. Intente nuevamente',)
+
 simular_cargando()  #Llamamos a la función para mostrar el mensaje de carga
+
 mensaje_menu = f"\n\n[1] Jugar \n[2] Puntajes \n[3] Salir \n\nUsted selecciona la opción: "
 
 while True:  
@@ -11,6 +17,7 @@ while True:
 
     match menu:  
         case 1:
+            pass
             lista_palabras = elegir_idioma('Selecciona el idioma de palabras a usar \n\t[EN o ES]: ')  #Pido al usuario que seleccione el idioma para jugar
             if lista_palabras:  #Condiciono que si se ha seleccionado una lista de palabras válida.
                 eleccion_palabra_oculta = seleccionar_palabra(lista_palabras)  #llamo a la funcion que busca en el diccionario una palabra random.
@@ -65,4 +72,3 @@ while True:
 
         case 3:
             break
-
