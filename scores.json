@@ -1,18 +1,46 @@
 [
     {
-        "nombre": "cristian",
-        "Puntaje": 1
-    },
-    {
         "nombre": "andres",
         "Puntaje": 7
     },
     {
-        "nombre": "Deltron",
+        "nombre": "Del",
+        "Puntaje": 4
+    },
+    {
+        "nombre": "Carlos",
         "Puntaje": 2
     },
     {
+        "nombre": "Fran",
+        "Puntaje": 5
+    },
+    {
+        "nombre": "Del",
+        "Puntaje": 8
+    },
+    {
+        "nombre": "Ignacio",
+        "Puntaje": 8
+    },
+    {
+        "nombre": "Del",
+        "Puntaje": 8
+    },
+    {
+        "nombre": "Ferrer",
+        "Puntaje": 11
+    },
+    {
+        "nombre": "Betular",
+        "Puntaje": 10
+    },
+    {
         "nombre": "Deltron",
-        "Puntaje": 1
+        "Puntaje": 6
+    },
+    {
+        "nombre": "Marshall",
+        "Puntaje": 8
     }
 ]
