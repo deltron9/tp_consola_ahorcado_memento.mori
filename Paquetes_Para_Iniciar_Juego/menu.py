@@ -7,7 +7,7 @@ from Paquetes_Para_Iniciar_Juego import *
 def menu():
     imprimir_bienvenida()
     simular_cargando()
-    mensaje_menu = f"\n\n[1] Jugar \n[2] Puntajes \n[3] Salir \n\nUsted selecciona la opción: "
+    mensaje_menu = f"\t\t\t\t----------Ahorcado.py----------\n\t\t\t\t----------Menu Principal----------\n\n\t\t\t\t[1] Jugar \n\t\t\t\t[2] Puntajes \n\t\t\t\t[3] Salir \n\n\t\t\t\tChoose you destiny: "
     while True:
         menu = validar_entero(mensaje_menu)
 
