@@ -1,6 +1,6 @@
-from Paquetes_Interfaz_De_Consola.simulacion_de_carga import simular_cargando, imprimir_bienvenida
-from Paquetes_Validaciones_Ingresos.Ingresos import validar_entero
-from Paquetes_Para_Iniciar_Juego import jugar, mostrar_puntajes
+from Paquetes_Interfaz_De_Consola.simulacion_de_carga import *
+from Paquetes_Validaciones_Ingresos.Ingresos import *
+from Paquetes_Para_Iniciar_Juego import * 
 
 
 
@@ -19,5 +19,3 @@ def menu():
             case 3:
                 print("Nos vemos!!!!")
                 break
-            case _:
-                print("Opcion no válida. Intente nuevament")
