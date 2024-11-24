@@ -17,5 +17,5 @@ def menu():
             case 2:
                 mostrar_puntajes()
             case 3:
-                print("Nos vemos!!!!")
+                print(imprimir_monigote(10))
                 break
