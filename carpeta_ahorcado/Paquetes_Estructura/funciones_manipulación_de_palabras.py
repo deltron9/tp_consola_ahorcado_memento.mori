@@ -1,43 +1,51 @@
 import random
 import json
 
-def seleccionar_palabra() -> list:
-    seleccionada = random.choice()
+def seleccionar_palabra(lista_palabras: list) -> str|bool:
+    '''
+    Esta función selecciona una palabra aleatoria de la lista proporcionada.
+    '''
+    if not lista_palabras:
+        return None  #Retorna None si la lista está vacía
+    seleccionada = random.choice(lista_palabras)  #Selecciona una palabra aleatoria mediante random.choice
     return seleccionada
 
+#--------------------------------------------------------------------------------------------------------------
 
-def elegir_idioma(msj_idioma: str) -> dict:
+import json
+
+def elegir_idioma(msj_idioma: str, mensaje_error: str = "¿Que te hablo en japonés?. \nPor favor ingresá 'EN' o 'ES'.") -> list:
     '''
-    Esta función recibe como parametro un ingreso que es captado con un mensaje mediante la consola
+    Esta función recibe como parámetro un mensaje que se muestra en la consola
+    y devuelve una lista de palabras en el idioma seleccionado y validado.
     '''
     idioma = input(msj_idioma).upper()
     
+    #Abrimos el archivo de data.json en modo lectura
     with open("data.json", "r") as archivo:
-        palabras_seleccionadas = json.load(archivo)
-    if idioma == 'ES':
-        return palabras_seleccionadas["ES"]
-    else:
-        return palabras_seleccionadas["EN"]
+        palabras_seleccionadas = json.load(archivo)  # Cargamos el archivo en la variable 'palabras_seleccionadas'
+
+    #Inicializamos una lista para las palabras seleccionadas
+    palabras = []
+
+    #Filtramos las palabras según el idioma que seleccione el usuario
+    for item in palabras_seleccionadas["ahorcado"]:
+        if idioma == 'ES':
+            palabras.append(item["ES"])
+        elif idioma == 'EN':
+            palabras.append(item["EN"])
+        else:
+            print(mensaje_error)  #Imprimimos el mensaje de error
+            return elegir_idioma(msj_idioma, mensaje_error)  #Por fin le encontré un uso a la recursividad!
+            
+    return palabras
 
 
-def p_oculta(eleccion_palabra):
+#-----------------------------------------------------------------------------------------------------------------------
+
+def ocultar_palabra(eleccion_palabra):
     palabra_oculta = []
 
     for _ in eleccion_palabra:
         palabra_oculta.append('_')
     return palabra_oculta
-
-
-# def palabra_elegida():
-#     # Devuelve la palabra elegida según el idioma que eligio el usuario
-#     eleccion = []
-#     palabra_seleccionada = seleccionar_palabra()  # Obtener palabra aleatoria
-#     if elegir_idioma():
-#         # Agregar palabra en español
-#         eleccion.append(palabra_seleccionada["ES"])
-#     else:
-#         eleccion.append(palabra_seleccionada["EN"])
-#     return eleccion
-
-# idioma = elegir_idioma()
-# palabra_seleccionada = seleccionar_palabra()

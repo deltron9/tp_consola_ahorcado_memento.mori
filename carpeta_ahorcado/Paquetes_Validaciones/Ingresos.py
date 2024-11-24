@@ -28,30 +28,28 @@ def validar_cadena_usuario(mensaje: str, mensaje_error: str) -> str:
         if user_input and user_input.isalnum():  #Verifica que la cadena sea alfanumérica (solo letras y números)
             return user_input.capitalize()  #Retorna la caena válida capitalizada
         
-        print(mensaje_error)  # Muestra mensaje de error si la cadena no es válida
+        print(mensaje_error)  #Muestra mensaje de error si la cadena no es válida
 
 
 
 
 #------------------------------Validación a la hora de jugar------------------------------------------------------
 #Esta funcion SOLAMENTE VALIDA EL INGRESO DE LA LETRA POR PARTE DEL USUARIO
-def validar_cadena_en_juego(mensaje: str, mensaje_error: str = 'Error, solo podés ingresar 1 letra capo', longitud: int = 1) -> str | None: 
+def validar_cadena_en_juego(mensaje: str, mensaje_error: str = 'Error, solo podés ingresar 1 letra capo', longitud: int = 1) -> str | None:
     '''
     Solicita una cadena y la valida por longitud y contenido.
     Retorna la cadena si es válida, o None si no lo es.
     Se valida si es solo alfabética.
     '''
-    caracter = str(input(mensaje))  #Solicita el ingreso
-    try:
-        if len(caracter) <= longitud:
-            return caracter
-        
-    except ValueError:
-        return None  # Valida la longitud
-    if caracter is not None and caracter.isalpha(): #Retorna la cadena válida
+    caracter = input(mensaje)  # Solicita el ingreso
+
+    # Verifica que el ingreso sea alfabético y tenga la longitud requerida
+    if len(caracter) == longitud and caracter.isalpha():
         return caracter
     else:
-        return mensaje_error + mensaje
+        print(mensaje_error)  # Muestra el mensaje de error
+        return None  # Retorna None si no es válido
+
 
 #----------------------------------Validacion para idioma de palabras--------------------------------------
 #Esta funcion SOLAMENTE VALIDA la seleccion de idioma
@@ -59,14 +57,12 @@ def validar_cadena_en_idioma(mensaje: str, mensaje_error: str = 'Error, seleccio
     """
     Solicita que seleccione el idioma de palabras para jugar al usuario, valida su longitud (2 letras max) y contenido.
     Retorna la cadena si es válida, o muestra un mensaje de error si no lo es.
-    La cadena debe ser alfabética.
+    La cadena tiene que ser 'ES' o 'EN'.
     """
-    cadena_idioma = input(mensaje).strip()  #Solicita el ingreso y elimina espacios extra
-    if len(cadena_idioma) <= longitud and cadena_idioma.isalpha():
-        return cadena_idioma  #Retorna la cadena si es válida
-    else:
-        print(mensaje_error)  #Muestra mensaje de error
-        return None  #Retorna None si no es válida
-
-
-
+    while True:
+        cadena_idioma = input(mensaje).strip().upper()  # Solicita el ingreso y elimina espacios extra, convierte a mayúsculas
+        if len(cadena_idioma) == longitud and cadena_idioma in ['ES', 'EN']:
+            return True  #Retorna la cadena si es válida
+        else:
+            print(mensaje_error)  #Muestra mensaje de error hardcodeado
+            return None  #Retorna None si no es válida

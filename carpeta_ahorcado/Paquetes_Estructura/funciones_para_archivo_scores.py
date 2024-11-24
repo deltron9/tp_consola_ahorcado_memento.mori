@@ -26,4 +26,3 @@ def guardar_puntajes(estructura_datos_usuario):
     '''
     with open("scores.json", "a") as scores: 
         json.dump(estructura_datos_usuario, scores, indent=4)
-

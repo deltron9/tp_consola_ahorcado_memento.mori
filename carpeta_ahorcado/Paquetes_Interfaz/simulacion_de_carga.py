@@ -26,10 +26,19 @@ bienvenida = '''
 ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝╚═╝░░░░░░░░╚═╝░░░
 '''
 
-def simular_cargando():
+def simular_cargando(mensaje: str = 'Cargando') -> str:
 #Esta función simula un carga de juego y muestra el mensaje en pantalla de la variable BIENVENIDA
-    mensaje = "Cargando..."
-    for i in range(5):  #Repite 10 veces
-        print(f"{mensaje}")  #Imprime el mensaje seguido de un número de línea
-        time.sleep(0.5)  #Pausa de medio segundo entre cada impresión
-    print (bienvenida)
+    mensaje_impresion = mensaje
+    suma_puntos = 0
+    print(f"{mensaje_impresion}")
+    for i in range(3):
+        mensaje_impresion += '.'
+        print(f"{mensaje_impresion}")
+        time.sleep(1)  #Pausa de un segundo entre cada impresión
+        suma_puntos += 1
+        if suma_puntos == 3:
+            print(f'¡Carga completa!')
+            time.sleep(2)
+
+
+print(bienvenida)
