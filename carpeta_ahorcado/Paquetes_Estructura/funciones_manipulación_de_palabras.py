@@ -41,7 +41,7 @@ def elegir_idioma(msj_idioma: str, mensaje_error: str = "¿Que te hablo en japon
     return palabras
 
 
-#-----------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------
 
 def ocultar_palabra(eleccion_palabra):
     palabra_oculta = []
