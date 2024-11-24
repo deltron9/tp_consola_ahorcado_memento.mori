@@ -71,9 +71,6 @@ def jugar():
         print(f"Letras usadas: {letras_usadas}")
         print(F"Tienes {vidas} vidas ")
 
-        # El se le pide una letra al usuario
-        # letra_ingresada_por_usuario = validar_cadena_en_juego(
-        #     "Ingrese una letra: ")
         letra_ingresada_por_usuario = ("Ingrese una letra: ")
         while letra_ingresada_por_usuario in letras_usadas:
             print(f"\n Esta letra ya fue utilizada!")
