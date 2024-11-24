@@ -3,11 +3,8 @@ from Paquetes_Estructura import *
 from Paquetes_Validaciones import *
 from Paquetes_Interfaz import *
 
-
 simular_cargando()
-#nombre_usuario = validar_cadena_usuario("Ingrese su nombre \nahorcado@python~$:", 'Error al ingresar su nombre. Intente nuevamente',)
 mensaje_menu = f"\n\n[1] Jugar \n[2] Puntajes \n[3] Salir \n\nUsted selecciona la opción: "
-
 while True:
     menu = validar_entero(mensaje_menu)
     
@@ -30,12 +27,12 @@ while True:
                     
                     print(f"\nLetras usadas: {letras_usadas}\n")
                     
-                    # Verifica si se ha llegado a la etapa 7
+                    #Verifica si se ha llegado a la etapa 7
                     if etapa == 7:
-                        time.sleep(2)  # Espera 2 segundos
+                        time.sleep(2)  #Espera 2 segundos
                         print(f"\n¡Se te acabaron las vidas! La palabra era: {eleccion_palabra_oculta}")
-                        print(imprimir_monigote(8))  # Muestra el monigote final
-                        break  # Sale del bucle
+                        print(imprimir_monigote(8))  #Muestra el monigote final
+                        break 
 
                     letra_ingresada_en_juego = validar_cadena_en_juego("La letra puede ser: ")
                     
@@ -61,9 +58,6 @@ while True:
                     print(f"\n¡Buenísimo rey! Adivinaste la palabra: {eleccion_palabra_oculta}")
         
         case 2:
-            # Aquí puedes agregar la lógica para la opción 2
             pass
-        
         case 3:
-            # Aquí puedes agregar la lógica para la opción 3
-            break  # Salir del bucle
+            break  #Salir del bucle
