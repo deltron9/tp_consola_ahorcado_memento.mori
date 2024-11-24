@@ -1,3 +1,3 @@
-from Paquetes_Para_Jugar import menu
+from Paquetes_Para_Iniciar_Juego import menu
 
 menu()
