@@ -3,11 +3,11 @@
 Grupo: ▌║█║▌│║▌│║▌║▌█║ 𝗠𝗲𝗺𝗲𝗻𝘁𝗼 𝗠𝗼𝗿𝗶 ▌│║▌║▌│║║▌█║▌║█ </br>
 </br>
  Integrantes: </br>
- 𝓒𝓻𝓲𝓼𝓽𝓲𝓪𝓷 𝓒𝓸𝓵𝓵𝓪𝓷𝓽𝓮 (Planificación inicial, diseños de monigote, y documentación)</br>
+ 𝓒𝓻𝓲𝓼𝓽𝓲𝓪𝓷 𝓒𝓸𝓵𝓵𝓪𝓷𝓽𝓮 (Planificación inicial, desarrollo de funciones, modularización, diseños de monigote y pantallas de carga, y documentación detallada)</br>
  𝓐𝓷𝓭𝓻𝓮𝓼 𝓑𝓮𝓷𝓮𝓰𝓪𝓼 (Planificación inicial, Desarrollo de funciones, diseños de monigote, y documentación)</br>
- 𝓜𝓪𝓻𝓬𝓸𝓼 𝓐𝓵𝓶𝓲𝓻𝓸𝓷 (Desarrollo de funciones, testeo de proyecto y documentación)</br>
+ 𝓜𝓪𝓻𝓬𝓸𝓼 𝓐𝓵𝓶𝓲𝓻𝓸𝓷 (Desarrollo de lógica principal,  documentación)</br>
 </br>
-agradecimientos a: 𝙑𝙖𝙡𝙚𝙣𝙩𝙞𝙣 𝘿'𝙖𝙙𝙖𝙢𝙤 (∩ ͡° ͜ʖ ͡°)⊃
+Agradecimientos a: 𝙑𝙖𝙡𝙚𝙣𝙩𝙞𝙣 𝘿'𝙖𝙙𝙖𝙢𝙤 y 𝙋𝙖𝙗𝙡𝙤 𝘾𝙤𝙣𝙙𝙚 (∩ ͡° ͜ʖ ͡°)⊃
 </br>
 Enunciado</br>
 Objetivo:</br>
