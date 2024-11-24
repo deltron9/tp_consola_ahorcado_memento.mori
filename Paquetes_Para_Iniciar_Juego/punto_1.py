@@ -25,6 +25,12 @@ def jugar():
             print(f"\nLetras usadas: {letras_usadas}\n")  #Muestra las letras que ya adivino el jugador.
             print(f'Vidas: {vidas - 1}')
             
+            if etapa == 7:
+                #Espera 2 segundos para hacer la transición entre el ahorcado finalizado y la pantalla de game over
+                time.sleep(2)
+                print(f"\n---------------------------------------------------------------------------------------\n¡Se te acabaron las vidas! \nLa palabra era: {eleccion_palabra_oculta}")
+                print(imprimir_monigote(8))  #
+                break  #termina el juego acá
 
             letra_ingresada_en_juego = validar_cadena_en_juego("La letra puede ser: ")
             
@@ -46,13 +52,7 @@ def jugar():
                 etapa += 1  #Aumenta una etapa lo que deriva en el printeo por pantalla de la evolución del monigote.
                 vidas -= 1  # Pierde una vida
         
-            if etapa == 7:
-                #Espera 2 segundos para hacer la transición entre el ahorcado finalizado y la pantalla de game over
-                time.sleep(2)
-                print(f"\n---------------------------------------------------------------------------------------\n¡Se te acabaron las vidas! \nLa palabra era: {eleccion_palabra_oculta}")
-                print(imprimir_monigote(8))  #
-                break  #termina el juego acá
-            elif '_' not in palabra_escondida:  #Condición que si la palabra se adivinó (se dilucida viendo si hay '_' en la palabra)
+            if '_' not in palabra_escondida:  #Condición que si la palabra se adivinó (se dilucida viendo si hay '_' en la palabra)
                 time.sleep(2)
                 print(f"\n{imprimir_monigote(9)} \n¡Buenísimo rey! Adivinaste la palabra: [{eleccion_palabra_oculta}] \n\tobtuviste {puntos_usuario} puntos.\n")
                 break  #Termina el juego si la palabra fue adivinada
