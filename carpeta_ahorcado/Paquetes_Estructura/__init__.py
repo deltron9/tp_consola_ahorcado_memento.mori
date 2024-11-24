@@ -1,0 +1,2 @@
+from Paquetes_Estructura.funciones_manipulación_de_palabras import *
+from Paquetes_Estructura.funciones_para_archivo_scores import *

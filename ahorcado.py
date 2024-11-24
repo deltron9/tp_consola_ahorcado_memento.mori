@@ -1,7 +1,8 @@
-from carpeta_ahorcado.Paquete_Estructura import *
-from carpeta_ahorcado.Paquetes_Validaciones import *
+from Paquetes_Estructura import *
+from Paquetes_Validaciones import *
 import random
 import json
+
 
 # Cargamos los datos del archivo json
 
@@ -100,6 +101,7 @@ def jugar():
     else:
         print(f"PERDISTE!! La palabra era {eleccion_palabra}")
         print(imprimir_monigote(8))
+
 
         # gUARDAR pUNTAJE
         nombre_usuario = input("Ingrese su nombre: ")
