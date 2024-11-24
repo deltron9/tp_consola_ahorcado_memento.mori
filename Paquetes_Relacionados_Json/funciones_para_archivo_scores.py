@@ -1,33 +1,20 @@
 import json
 
-estructura_datos_usuario = {
-    "nombre": "",
-    "Puntaje": 0,
-}
+def cargar_nombre_y_puntos(nombre, puntos):
+    """
+    esta función recibe el nombre y los puntos de el usuario
+    Añade el usuario con su puntaje al archivo 'scores.json'
+    """
+    with open("scores.json", "r") as file:
+        datos = json.load(file)
 
+    nuevo_usuario = {"nombre": nombre, "Puntaje": puntos}
+    datos.append(nuevo_usuario)
 
-def guardar_estructura():
-    with open("scores.json", "w") as scores:
-        json.dump(estructura_datos_usuario, scores, indent=4)
+    with open("scores.json", "w") as file:
+        json.dump(datos, file, indent=4)
 
+    print(f"{nombre} acumulaste {puntos} puntos")
 
-def cargar_puntaje():
-    '''
-    Esta función abre el archivo scores.json en modo lectura.
-    Carga el archivo mediante jsoin.load en la variable 'puntaje_cargado'.
-    y retorna la variable 
-    '''
-    with open("ahorcado\scores.json", "r") as archivo:
-        puntaje_cargado = json.load(archivo)
-        return puntaje_cargado
+    
 
-
-def guardar_puntajes(estructura_datos_usuario):
-    '''
-    Esta función abre el archivo 'scores.json' en modo append. 
-    lo cual cualquier dato que se escriba se agregará al final del archivo, sin borrar lo que ya exista. 
-    Se utiliza la función json.dump() para escribir (o guardar) la variable 'estructura_datos_usuario' en el archivo, 
-    formateándola con una sangría de 4 espacios (usando indent= 4) para que sea más legible.
-    '''
-    with open("scores.json", "a") as scores: 
-        json.dump(estructura_datos_usuario, scores, indent=4)
