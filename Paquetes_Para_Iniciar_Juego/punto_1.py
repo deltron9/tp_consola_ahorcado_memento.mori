@@ -2,7 +2,7 @@ import time  #Importo el módulo time para poder usar funciones relacionadas con
 from Paquetes_Relacionados_Json import elegir_idioma, seleccionar_palabra, ocultar_palabra, cargar_nombre_y_puntos 
 from Paquetes_Validaciones_Ingresos import *  
 from Paquetes_Interfaz_De_Consola import *  
-
+from Paquetes_Para_Iniciar_Juego.punto_2 import *
 
 def jugar():
     lista_palabras = elegir_idioma('Selecciona el idioma de palabras a usar \n\t[EN o ES]: ')  #Pido al usuario que seleccione el idioma para jugar
@@ -23,13 +23,8 @@ def jugar():
                 print(letra, end=" ")  #Imprime cada letra de la palabra escondida, separadas por espacios.
             
             print(f"\nLetras usadas: {letras_usadas}\n")  #Muestra las letras que ya adivino el jugador.
+            print(f'Vidas: {vidas - 1}')
             
-            if etapa == 7:
-                #Espera 2 segundos para hacer la transición entre el ahorcado finalizado y la pantalla de game over
-                time.sleep(2)
-                print(f"\n¡Se te acabaron las vidas! \nLa palabra era: {eleccion_palabra_oculta}")
-                print(imprimir_monigote(8))  #
-                break  #termina el juego acá
 
             letra_ingresada_en_juego = validar_cadena_en_juego("La letra puede ser: ")
             
@@ -50,13 +45,21 @@ def jugar():
             else:  #Si la letra ingresada no está en la palabra oculta:
                 etapa += 1  #Aumenta una etapa lo que deriva en el printeo por pantalla de la evolución del monigote.
                 vidas -= 1  # Pierde una vida
-
-            if '_' not in palabra_escondida:  #Condición que si la palabra se adivinó (se dilucida viendo si hay '_' en la palabra)
-                print(f"\n¡Buenísimo rey! Adivinaste la palabra: {eleccion_palabra_oculta} \nobtuviste {puntos_usuario} puntos.")
-                break  #Termina el juego si la palabra fue adivinada
         
+            if etapa == 7:
+                #Espera 2 segundos para hacer la transición entre el ahorcado finalizado y la pantalla de game over
+                time.sleep(2)
+                print(f"\n---------------------------------------------------------------------------------------\n¡Se te acabaron las vidas! \nLa palabra era: {eleccion_palabra_oculta}")
+                print(imprimir_monigote(8))  #
+                break  #termina el juego acá
+            elif '_' not in palabra_escondida:  #Condición que si la palabra se adivinó (se dilucida viendo si hay '_' en la palabra)
+                time.sleep(2)
+                print(f"\n{imprimir_monigote(9)} \n¡Buenísimo rey! Adivinaste la palabra: [{eleccion_palabra_oculta}] \n\tobtuviste {puntos_usuario} puntos.\n")
+                break  #Termina el juego si la palabra fue adivinada
+
         # Guardar puntaje
         nombre_usuario = validar_cadena_usuario('Ingrese su nombre: ', 'ERROR')
         cargar_nombre_y_puntos(nombre_usuario, puntos_usuario)
-
+        mostrar_puntajes()
+        time.sleep(2)
         
