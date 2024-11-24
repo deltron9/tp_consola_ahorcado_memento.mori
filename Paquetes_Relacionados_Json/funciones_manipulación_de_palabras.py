@@ -22,7 +22,7 @@ def elegir_idioma(msj_idioma: str, mensaje_error: str = "¿Que te hablo en japon
     idioma = input(msj_idioma).upper()
     
     #Abrimos el archivo de data.json en modo lectura
-    with open("ahorcado/data.json", "r") as archivo:
+    with open("data.json", "r") as archivo:
         palabras_seleccionadas = json.load(archivo)  # Cargamos el archivo en la variable 'palabras_seleccionadas'
 
     #Inicializamos una lista para las palabras seleccionadas

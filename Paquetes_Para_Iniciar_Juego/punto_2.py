@@ -1,7 +1,7 @@
 import json
 
 def mostrar_puntajes():
-    with open("ahorcado/scores.json", "r") as file:
+    with open("scores.json", "r") as file:
         datos = json.load(file)
 
     for usuario in datos:     # Recorrer la lista y mostrar los nombres y puntajes de los usuarios
