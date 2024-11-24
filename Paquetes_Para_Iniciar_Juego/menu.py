@@ -1,6 +1,6 @@
 from Paquetes_Interfaz_De_Consola.simulacion_de_carga import *
 from Paquetes_Validaciones_Ingresos.Ingresos import *
-from Paquetes_Para_Iniciar_Juego import * 
+from Paquetes_Para_Iniciar_Juego import *
 
 
 
