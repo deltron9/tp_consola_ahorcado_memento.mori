@@ -1,9 +1,9 @@
 import random
 import json
 
-def seleccionar_palabra(lista_palabras: list) -> str|bool:
+def seleccionar_palabra(lista_palabras: list) -> list|bool:
     '''
-    Esta función selecciona una palabra aleatoria de la lista proporcionada.
+    Esta función selecciona una palabra aleatoria de la lista proporcionada y la devuelve.
     '''
     if not lista_palabras:
         return None  #Retorna None si la lista está vacía
@@ -23,7 +23,7 @@ def elegir_idioma(msj_idioma: str, mensaje_error: str = "¿Que te hablo en japon
     
     #Abrimos el archivo de data.json en modo lectura
     with open("data.json", "r") as archivo:
-        palabras_seleccionadas = json.load(archivo)  # Cargamos el archivo en la variable 'palabras_seleccionadas'
+        palabras_seleccionadas = json.load(archivo)  #Cargamos el archivo en la variable 'palabras_seleccionadas'
 
     #Inicializamos una lista para las palabras seleccionadas
     palabras = []
